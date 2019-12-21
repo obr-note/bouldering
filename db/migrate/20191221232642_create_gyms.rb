@@ -6,8 +6,8 @@ class CreateGyms < ActiveRecord::Migration[6.0]
       t.string :price
       t.string :gym_url
       t.references :area, null: false, foreign_key: true
-      t.references :created_user, null: false, foreign_key: true
-      t.references :updated_user, null: false, foreign_key: true
+      t.references :created_user, null: false, foreign_key: { to_table: :users }
+      t.references :updated_user, null: false, foreign_key: { to_table: :users }
 
       t.timestamps
     end
