@@ -5,23 +5,18 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: postgresql
+  adapter: sqlite
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
-  encoding: unicode
-  username: bouldering
-  password:
-  host: localhost
-  port: 5432
 
 development:
   <<: *default
-  database: boulderingdb
+  database: db/development.sqlite3
 
 test:
   <<: *default
-  database: boulderingtest
+  database: db/test.sqlite3
 
 production:
   <<: *default
-  database: boulderingpro
+  database: db/production.sqlite3
