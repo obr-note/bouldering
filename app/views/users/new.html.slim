@@ -1,0 +1,25 @@
+/サインアップページ
+
+/タイトル
+h1 Sign up!
+
+/フォーム
+= form_with model: @user, local: true do |f|
+
+  /名前
+  div class="form-group"
+    = f.label :name, "Name"
+    = f.text_field :name, class: "form-contol"
+
+  /パスワード
+  div class="form-group"
+    = f.label :password, "Password"
+    = f.password_field :password, class: "form-control"
+  
+  /パスワード確認
+  div class="form-group"
+    = f.label :name, "Confirmation"
+    = f.password_field :password_confirmation, class: "form-control"
+
+  /送信
+  = f.submit "Signup", class: "btn"
