@@ -1,0 +1,20 @@
+/ログインページ
+
+/タイトル
+h1 Login Page!
+
+/フォーム
+= form_for :session,url: sessions_path do |f|
+
+  /名前
+  div class="form-group"
+    = f.label :name, "Name"
+    = f.text_field :name, class: "form-contol"
+
+  /パスワード
+  div class="form-group"
+    = f.label :password, "Password"
+    = f.password_field :password, class: "form-control"
+  
+  /送信
+  = f.submit "Login", class: "btn"
