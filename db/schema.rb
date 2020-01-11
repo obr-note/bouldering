@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_21_232859) do
+ActiveRecord::Schema.define(version: 2020_01_11_071755) do
 
   create_table "areas", force: :cascade do |t|
     t.string "area_name"
@@ -51,13 +51,6 @@ ActiveRecord::Schema.define(version: 2019_12_21_232859) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["comment_id"], name: "index_nices_on_comment_id"
     t.index ["user_id"], name: "index_nices_on_user_id"
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.string "password_digest"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   add_foreign_key "comments", "gyms"
