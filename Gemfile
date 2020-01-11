@@ -16,6 +16,7 @@ gem 'bcrypt', '~> 3.1.7' #has_secure_passwordメソッド使用
 gem 'bootsnap', '>= 1.4.2', require: false #require: falseは、Railsアプリ本体ではそのgemは呼ばれない、スクリプトの方では手動でrequireすればよい
 gem "slim-rails" #slimの導入
 gem "html2slim" #erbファイルを一発でslimに変換
+gem "devise" #ログイン機能を簡単に実装しセキュリティも強化する
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw] #デバック機能を追加

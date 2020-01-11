@@ -4,7 +4,7 @@
 h1 Login Page!
 
 /フォーム
-= form_for :session,url: sessions_path do |f|
+= form_for :session, url: sessions_path, local: true do |f|
 
   /名前
   div class="form-group"
