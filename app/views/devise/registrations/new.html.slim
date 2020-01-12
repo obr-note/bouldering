@@ -1,5 +1,4 @@
-h2
-  | Sign up
+h2 Sign up
 = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
   = render "devise/shared/error_messages", resource: resource
   .field
@@ -8,11 +7,9 @@ h2
     = f.email_field :email, autofocus: true, autocomplete: "email"
   .field
     = f.label :password
+    br
     - if @minimum_password_length
-      em
-        | (
-        = @minimum_password_length
-        |  characters minimum)
+      em = "(#{@minimum_password_length}characters minimum)" #修正 <em>は<p>と同じ？ @minimum_password_length(/config/initializers/devise.rbの169行目で設定変更)はrubyなので、#{}で囲う
     br
     = f.password_field :password, autocomplete: "new-password"
   .field

@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users #ユーザ登録とログイン
   root "home#index" #トップページ
 
-  resources :users, only: [:new, :create] #ユーザー登録
-  resources :sessions, only: [:new, :create, :destroy] #ユーザーログイン
 end
