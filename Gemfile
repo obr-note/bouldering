@@ -5,7 +5,7 @@ ruby '2.6.1'
 gem 'rails', '~> 6.0.2'
 gem "sqlite3", "~> 1.4" #データベース
 #gem "pg"
-gem 'puma', '~> 4.1' #Webサーバー、HTTPリクエストを受け取り何らかのレスポンスを返す、$rails sで起動
+gem 'puma', '~> 4.3' #Webサーバー、HTTPリクエストを受け取り何らかのレスポンスを返す、$rails sで起動
 gem 'sass-rails', '>= 6' #CSSの拡張機能、入れ子とか使える
 gem 'webpacker', '~> 4.0' #モダンなフロントエンド開発を強力にサポート、CSS,js,画像などを１つのファイルとしてまとめるためのモジュールハンドラー
 gem 'turbolinks', '~> 5' #ページ遷移をAjaxに置き換え、JavaScriptやCSSのパースを省略することで高速化するgem
